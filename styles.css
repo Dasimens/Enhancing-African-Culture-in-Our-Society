@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: whitesmoke;
+    font-family: 'inter' sans-serif;
+}
+
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.featured-article img,
+.article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Sticky Nav */
+nav {
+    display: flex;
+    padding: 5px 5%;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    z-index: 100;
+    background: whitesmoke;
+
+}
+
+.nav-left h1 {
+    font-size: 2.5rem;
+    transition: font-size 0.3 ease;
+}
+
+#navbar.scrolled .nav-left {
+    font-size: 1.5rem;
+}
+
+.nav-right a {
+    margin-left: 20px;
+    color: hsl(0, 0%, 13%);
+    transition: color 0.3s;
+}
+
+.nav-right a:hover {
+    color: hsl(0, 0%, 30%);
+}
+
+/* .featured-article styles */
+.featured-article {
+    margin-bottom: 50px;
+}
+
+.featured-article h1 {
+    font-size: 2.5rem;
+    color: rgb(33, 33, 33);
+    margin: 15px 0;
+}
+
+.featured-article p {
+    font-size: 1.2rem;
+    color: rgb(55, 54, 54);
+    margin-bottom: 20px;
+
+}
+
+/* Smaller-article Styles */
+
+.smaller-articles {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.article {
+    flex: 1;
+    margin: 0 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.article h2 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.article p {
+    font-size: 1rem;
+    color: rgb(68, 66, 66);
+}
+
+a {
+    text-decoration: none;
+    color: hsl(211, 100%, 50%);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: hsl(211, 100%, 35%);
+}
+
+/* Footer */
+footer {
+    color: hsl(0, 0%, 13%);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: hsl(0, 0%, 13%);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: hsl(0, 0%, 30%);
+
+}
+
+/* Media Queries---------------------- */
+
+/* Tablet */
+@media screen and (max-width: 1025px) {
+    .nav-left h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .featured-article h1 {
+        font-size: 2.2rem;
+    }
+
+    .article h2 {
+        font-size: 1.7rem;
+    }
+
+    .smaller-articles {
+        flex-direction: column;
+    }
+
+    .articlen {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .nav-right a {
+        margin-left: unset;
+        margin-top: 20px;
+    }
+}
